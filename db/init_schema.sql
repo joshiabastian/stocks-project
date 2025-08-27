@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS stock_prices (
     close NUMERIC,
     adj_close NUMERIC,
     volume BIGINT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT unique_ticker_date UNIQUE (ticker, date)
 );
