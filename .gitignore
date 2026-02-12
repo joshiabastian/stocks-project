@@ -1,0 +1,41 @@
+# Python umum
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Virtual environment
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Database files
+*.sqlite3
+*.db
+
+# Postgres dump
+*.sql
+
+# Logs
+*.log
+logs/
+log/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+*.bak
+*.swp
