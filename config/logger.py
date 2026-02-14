@@ -1,13 +1,13 @@
 import logging
 
 # konfigurasi logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("data_pipeline.log"),
-        logging.StreamHandler()
-    ]
-)
-
-logger = logging.getLogger(__name__)
+def setup_logger(name=__name__, level=logging.INFO):
+    logging.basicConfig(
+        level=level,
+        format="%(asctime)s - %(levelname)s - %(message)s",
+        handlers=[
+            logging.FileHandler("data_pipeline.log"),
+            logging.StreamHandler()
+        ]
+    )
+    return logging.getLogger(name)
