@@ -1,3 +1,4 @@
+import sys
 import logging
 from db.init_db import init_db
 from db.utils_db import get_last_date
@@ -5,7 +6,7 @@ from config.logger import setup_logger
 from scripts.extract import fetch_stock_data, fetch_daily_stock_data
 from scripts.transform import transform_stock_data
 from scripts.load import load_data_to_db
-
+from datetime import datetime, timedelta
 
 def main():
     # Setup logger sekali di sini

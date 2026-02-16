@@ -35,7 +35,7 @@ def fetch_daily_stock_data(tickers, last_date):
     )
 
     if stock_data.empty:
-        log.warning("Tidak ada data baru yang diambil. Periksa simbol saham")
+        log.warning("Tidak ada data baru yang diambil mungkin Error/Weekend/Libur Nasional. Segera di cek!)")
         return None
 
     log.info("Pengambilan data harian selesai.")
