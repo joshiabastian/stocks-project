@@ -1,13 +1,11 @@
 CREATE TABLE IF NOT EXISTS stock_prices (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    ticker TEXT,
-    date TEXT,
-    open REAL,
-    high REAL,
-    low REAL,
-    close REAL,
-    adj_close REAL,
+    trade_date TEXT NOT NULL,
+    ticker TEXT NOT NULL,
+    open_price REAL,
+    high_price REAL,
+    low_price REAL,
+    close_price REAL,
     volume INTEGER,
-    created_at TEXT DEFAULT (datetime('now')),
-    CONSTRAINT unique_ticker_date UNIQUE (ticker, date)
+    daily_change_pct REAL,
+    PRIMARY KEY (trade_date, ticker)
 );

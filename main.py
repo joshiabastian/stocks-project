@@ -5,6 +5,7 @@ from scripts.extract import fetch_stock_data
 from scripts.transform import transform_stock_data
 from scripts.load import load_data_to_db
 
+
 def main():
     # Setup logger sekali di sini
     setup_logger()
@@ -35,6 +36,7 @@ def main():
         logger.info("Proses pipeline data selesai. Data siap untuk analisis.")
     else:
         logger.warning("Pipeline dihentikan karena tidak ada data yang diambil.")
+        
 
 if __name__ == "__main__":
     main()
