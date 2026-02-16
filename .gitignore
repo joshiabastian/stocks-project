@@ -26,7 +26,9 @@ ENV/
 # Postgres dump
 *.sql
 
-# Logs
+# Output & Logs
+output/
+
 *.log
 logs/
 log/
