@@ -1,6 +1,5 @@
 import logging
 import sys
-
 from config.logger import setup_logger
 from db.init_db import init_db
 from db.utils_db import get_last_date
@@ -9,16 +8,17 @@ from scripts.transform import transform_stock_data
 from scripts.load import load_data_to_db
 
 # Konfirgurasi Path
-DB_FILE_PATH  = "db/stock_data.db"
-SCHEMA_FILE   = "db/init_schema.sql"
-TABLE_NAME    = "stock_prices"
+DB_FILE_PATH = "db/stock_data.db"
+SCHEMA_FILE = "db/init_schema.sql"
+TABLE_NAME = "stock_prices"
 
 # Data Saham yang inin di ambil
-TICKERS       = ["BBCA.JK", "BBRI.JK", "BMRI.JK", "BBNI.JK"]
+TICKERS = ["BBCA.JK", "BBRI.JK", "BMRI.JK", "BBNI.JK"]
 
 # Tanggal awal & akhir untuk ambil data per periode
-START_DATE    = "2021-10-14"
-END_DATE      = "2026-02-13"
+START_DATE = "2021-10-14"
+END_DATE = "2026-02-13"
+
 
 # Ambil Data Saham Per periode
 def run_full_pipeline():
@@ -34,6 +34,7 @@ def run_full_pipeline():
     transformed_df = transform_stock_data(stock_df, TICKERS)
     load_data_to_db(transformed_df, TABLE_NAME, DB_FILE_PATH)
     logger.info("Full pipeline selesai.")
+
 
 # Ambil Data Saham Harian
 def run_daily_pipeline():
@@ -63,6 +64,7 @@ def run_daily_pipeline():
 
 
 # Run
+
 
 def main():
     setup_logger()
