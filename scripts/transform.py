@@ -8,7 +8,7 @@ log = logging.getLogger(__name__)
 REQUIRED_COLUMNS = ["trade_date", "ticker", "open_price", "high_price",
                     "low_price", "close_price", "volume", "daily_change_pct"]
 
-
+# func untuk transform data yang sudah di extract
 def transform_stock_data(stock_data: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
     """
     Transformasi DataFrame hasil yfinance menjadi format siap simpan ke DB.
