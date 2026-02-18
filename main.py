@@ -13,10 +13,10 @@ SCHEMA_FILE = "db/init_schema.sql"
 TABLE_NAME = "stock_prices"
 
 # Data Saham yang inin di ambil
-TICKERS = ["BBCA.JK", "BBRI.JK", "BMRI.JK", "BBNI.JK"]
+TICKERS = ["BBCA.JK", "BBRI.JK", "BMRI.JK", "BBNI.JK", "BNGA.JK"]
 
 # Tanggal awal & akhir untuk ambil data per periode
-START_DATE = "2021-10-14"
+START_DATE = "2003-01-01"
 END_DATE = "2026-02-13"
 
 
