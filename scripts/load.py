@@ -1,6 +1,5 @@
 import logging
 import os
-
 import pandas as pd
 from sqlalchemy import create_engine
 
@@ -8,7 +7,7 @@ log = logging.getLogger(__name__)
 
 OUTPUT_DIR = "output"
 
-
+# func untuk nge load data ke db
 def load_data_to_db(df: pd.DataFrame, table_name: str, db_path: str) -> None:
     """
     Memuat DataFrame ke tabel SQLite dan menyimpan salinan CSV ke folder output.
@@ -53,9 +52,7 @@ def load_data_to_db(df: pd.DataFrame, table_name: str, db_path: str) -> None:
         raise
 
 
-# ---------------------------------------------------------------------------
-# Helper: INSERT OR IGNORE untuk SQLite (menghindari error duplikat PK)
-# ---------------------------------------------------------------------------
+# func untuk menghindari duplikat PK
 def _insert_or_ignore(table, conn, keys, data_iter):
     """Custom insert method untuk pandas to_sql yang pakai INSERT OR IGNORE."""
     from sqlalchemy.dialects.sqlite import insert as sqlite_insert
