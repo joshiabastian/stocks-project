@@ -36,7 +36,7 @@ def fetch_stock_data(tickers: list[str], start_date: str, end_date: str) -> pd.D
     log.info(f"Pengambilan data periode selesai. Shape: {stock_data.shape}")
     return stock_data
 
-
+# func untuk ambil data harian
 def fetch_daily_stock_data(tickers: list[str], last_date: datetime) -> pd.DataFrame | None:
     """
     Mengambil data saham harian sejak last_date + 1 hari hingga hari ini.
