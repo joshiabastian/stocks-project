@@ -1,7 +1,6 @@
 import sqlite3
 import logging
 from datetime import datetime
-
 import pandas as pd
 
 log = logging.getLogger(__name__)
