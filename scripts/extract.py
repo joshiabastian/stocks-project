@@ -1,12 +1,11 @@
 import logging
 from datetime import datetime, timedelta
-
 import pandas as pd
 import yfinance as yf
 
 log = logging.getLogger(__name__)
 
-
+# Func untuk ambil data per periode
 def fetch_stock_data(tickers: list[str], start_date: str, end_date: str) -> pd.DataFrame | None:
     """
     Mengambil data saham untuk periode tertentu.
