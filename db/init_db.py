@@ -3,7 +3,7 @@ import logging
 
 log = logging.getLogger(__name__)
 
-
+# func untuk inisialisasi database
 def init_db(db_path: str, schema_file: str) -> None:
     """Inisialisasi database SQLite dengan schema dari file .sql."""
     try:
