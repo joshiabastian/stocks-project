@@ -28,6 +28,7 @@ ENV/
 
 # Output & Logs
 output/
+*.csv
 
 *.log
 logs/
