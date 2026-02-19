@@ -27,7 +27,7 @@ def transform_stock_data(stock_data: pd.DataFrame, tickers: list[str]) -> pd.Dat
 
     for ticker in tickers:
         try:
-            # Ambil data per ticker (handle MultiIndex vs single)
+            # Ambil data per ticker
             if isinstance(stock_data.columns, pd.MultiIndex):
                 if ticker not in stock_data.columns.get_level_values(0):
                     log.warning(f"Ticker '{ticker}' tidak ditemukan di data, dilewati.")
