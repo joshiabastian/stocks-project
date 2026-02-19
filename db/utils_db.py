@@ -5,7 +5,7 @@ import pandas as pd
 
 log = logging.getLogger(__name__)
 
-
+# func untuk mengambil data tanggal terakhir di database
 def get_last_date(db_file_path: str) -> datetime | None:
     """
     Mengembalikan tanggal terakhir yang tersimpan di tabel stock_prices.
