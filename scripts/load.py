@@ -27,7 +27,6 @@ def load_data_to_db(df: pd.DataFrame, table_name: str, db_path: str) -> None:
         engine = create_engine(f"sqlite:///{db_path}")
 
         # Pakai INSERT OR IGNORE agar PRIMARY KEY (trade_date, ticker) tidak error duplikat
-        # SQLite punya batas 999 SQL variables per query.
         # chunksize = floor(999 / 8 kolom) = 124, pakai 100 biar aman.
         with engine.begin() as conn:
             df.to_sql(
