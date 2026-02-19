@@ -1,7 +1,7 @@
 import logging
 import os
 
-
+# Func log 
 def setup_logger(level=logging.INFO):
     """
     Inisialisasi root logger sekali di main.py.
