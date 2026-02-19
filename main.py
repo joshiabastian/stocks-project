@@ -72,7 +72,7 @@ def main():
     # Inisialisasi schema
     init_db(DB_FILE_PATH, SCHEMA_FILE)
 
-    # Full atau Daily (default Daily)
+    # Pilih Full atau Daily (default Daily)
     mode = sys.argv[1] if len(sys.argv) > 1 else "daily"
 
     if mode == "full":
