@@ -3,7 +3,7 @@ import pandas as pd
 
 log = logging.getLogger(__name__)
 
-# Kolom yang wajib ada setelah rename agar sesuai schema database
+# Kolom yang wajib ada 
 REQUIRED_COLUMNS = ["trade_date", "ticker", "open_price", "high_price",
                     "low_price", "close_price", "volume", "daily_change_pct"]
 
