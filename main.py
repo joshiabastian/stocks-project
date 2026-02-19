@@ -63,7 +63,7 @@ def run_daily_pipeline():
     logger.info("Daily pipeline selesai.")
 
 
-# Func untuk run
+# Running
 def main():
     setup_logger()
     logger = logging.getLogger(__name__)
