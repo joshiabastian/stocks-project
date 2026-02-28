@@ -42,7 +42,7 @@ def transform_stock_data(stock_data: pd.DataFrame, tickers: list[str]) -> pd.Dat
                     "Open":      "open_price",
                     "High":      "high_price",
                     "Low":       "low_price",
-                    "Close":     "close_price",
+                    "Close":     "adj_close_price",
                     "Volume":    "volume",
                 },
                 inplace=True,
@@ -55,13 +55,13 @@ def transform_stock_data(stock_data: pd.DataFrame, tickers: list[str]) -> pd.Dat
 
             # Hitung perubahan harian (%)
             df_ticker["daily_change_pct"] = (
-                (df_ticker["close_price"] - df_ticker["open_price"])
+                (df_ticker["adj_close_price"] - df_ticker["open_price"])
                 / df_ticker["open_price"]
                 * 100
             ).round(4)
 
             # Buang baris yang semua harga-nya NaN (hari libur yfinance kadang inject baris kosong)
-            df_ticker.dropna(subset=["open_price", "close_price"], inplace=True)
+            df_ticker.dropna(subset=["open_price", "adj_close_price"], inplace=True)
 
             # Filter hanya kolom yang ada di schema, abaikan sisanya (mis. Adj Close)
             cols_to_keep = [c for c in REQUIRED_COLUMNS if c in df_ticker.columns]
