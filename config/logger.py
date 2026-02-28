@@ -5,8 +5,6 @@ import os
 def setup_logger(level=logging.INFO):
     """
     Inisialisasi root logger sekali di main.py.
-    Semua modul yang pakai logging.getLogger(__name__) akan otomatis
-    inherit konfigurasi ini (handler + level).
     """
     os.makedirs("log", exist_ok=True)
 
