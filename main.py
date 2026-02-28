@@ -39,7 +39,7 @@ def run_full_pipeline():
 # Ambil Data Saham Harian
 def run_daily_pipeline():
     """
-    Incremental update: ambil data sejak hari setelah last_date di DB sampai hari ini.
+    Incremental update: ambil data sejak hari setelah last_date di database sampai hari ini.
     Jalankan ini setiap hari (mis. via cron/scheduler).
     """
     logger = logging.getLogger(__name__)
